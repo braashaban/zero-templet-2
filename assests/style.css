@@ -132,7 +132,7 @@ header .container::after{
     display: block;
     color: white;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 18px;
     transition: 0.3s;
     position: relative;
     z-index: 2;
@@ -423,8 +423,9 @@ gap: 10px;
 }
 .portfolio .imges-portfolio{
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
   padding-top: 60px;
+  gap: 20px;
 width: 100%;
   
 }
@@ -432,6 +433,7 @@ width: 100%;
   position: relative;
   transition: 0.5s;
   overflow: hidden;
+  border-radius: 10px;
 }
 .portfolio .card img{
 max-width: 100%;
@@ -555,24 +557,15 @@ text-align: center;
 
 .state{
   position: relative;
-  background-image: url(./images/stats.png);
-  background-size: cover;
+background-color: #19c8fa;
   color: #fff;
 padding: 100px;
 text-align: center;
-}
-.state::before{
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgb(0 0 0 / 40%);;
 
 }
+
 .state .container{
-  background-color: rgb(15 116 143 / 70%);;
+
   display: flex;
 flex-wrap: wrap;
 justify-content: center;
@@ -870,6 +863,7 @@ margin-bottom: 20px;
   padding: 15px;
   color: #19c8fa;
   border: 1px solid #19c8fa;
+  cursor: pointer;
 }
 .price .card-price .form:hover a{
   color: #fff;
@@ -889,6 +883,7 @@ border-radius: 10px;
   color: #fff;
   background-color: #19c8fa;
   padding: 20px;
+  cursor: pointer;
   text-align: center;
 
 }
@@ -949,6 +944,7 @@ margin: 50px auto 38px}
   }
 }
 
+
 /* css for input form */
 .subscribe .form{
   display: flex;
@@ -973,10 +969,12 @@ margin: 50px auto 38px}
   padding: 20px 20px 20px 60px;
   caret-color:#19c8fa;
   width: calc(100% - 130px);
+  cursor: pointer;
 }
 .subscribe .form input[type="email"]::placeholder{
   font-size: 20px;
   color: #fff;
+  cursor: pointer;
 }
 
 /* input type submit */
@@ -1003,3 +1001,115 @@ max-width: 100%;
 }
 
 /* end subscribe */
+/******************************************************** */
+
+/*  start contact */
+.contact{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.contact .main-contact{
+  display: flex;
+  justify-content: space-between;
+}
+@media(max-width:991px){
+  .contact .main-contact{
+flex-direction: column;
+  }
+  .main-contact .contact-info{
+    text-align: center;
+  }
+}
+.main-contact form {
+flex-basis: 50%;
+}
+.main-contact form input{
+width: 100%;
+margin-bottom: 15px;
+padding: 15px;
+border: none;
+border: 1px solid #19c8fa;
+border-radius: 10px;
+cursor: pointer;
+}
+.main-contact form input::placeholder{
+  font-size: 19px;
+  color: #777;
+}
+.main-contact textarea{
+  width: 100%;
+margin-bottom: 15px;
+padding: 15px;
+border: none;
+border: 1px solid #19c8fa;
+border-radius: 10px;
+height: 112px;
+}
+.main-contact form p{
+  margin-bottom: 15px;
+ 
+
+}
+.main-contact .contact-info {
+  flex-basis: 40%;
+  margin-top: 20px;
+}
+.main-contact .contact-info .info-col1{
+margin-bottom: 30px;
+}
+.main-contact .contact-info h3{
+  margin-bottom: 15px;
+  font-weight: normal;
+}
+.main-contact .contact-info p{
+  margin-bottom: 15px;
+  color: #777;
+  line-height: 2;
+}
+.main-contact .contact-info address{
+  padding-bottom: 10px;
+  line-height: 2;
+  color: #777;
+}
+/*  end contact */
+
+footer{
+  background-color: #19c8fa;
+  color: #fff;
+  padding: 20px;
+}
+
+.main-footer{
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+.main-footer img{
+  width: 120px;
+}
+.main-footer .social p{
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: 19px;
+}
+.main-footer i{
+  font-size: 25px;
+  padding: 15px;
+}
+.main-footer i:hover{
+  color: #777;
+}
+footer p:last-child{
+text-align: center;
+margin-top: 20pxs;
+font-weight: bold;
+}
+footer p span{
+  text-align: center;
+  margin-top: 20px;
+  color: #777;
+  }
